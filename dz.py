@@ -7,7 +7,7 @@ from collections import Counter
 import psycopg2
 from psycopg2 import sql
 import json
-
+import re
 
 conn = psycopg2.connect(dbname='postgres', user='postgres', 
                         password='root', host='localhost', port='5432')
@@ -15,7 +15,7 @@ cur = conn.cursor()
 conn.autocommit = True
 
 cur.execute('drop table tags')
-cur.execute('CREATE TABLE IF NOT EXISTS tags (site_name varchar, url varchar, date timestamp, pickled_tags text, tags jsonb)')
+cur.execute('CREATE TABLE IF NOT EXISTS tags (site_name varchar, url varchar, date timestamp, pickled_tags text, tags text)')
 
 
 url = ('https://python-scripts.com/question/3322')
@@ -24,8 +24,9 @@ page = requests.get(url)
 tree = html.fromstring(page.content)
 now = datetime.datetime.now()
 
-f = open('C:/Users/Artem_Vetoshev/Desktop/py/sites.txt', 'a')
-f.write('{}, {}\n'.format(site, now.strftime("%Y-%m-%d %H:%M:%S")))
+# '{"bar": "baz", "balance": 7.77, "active":false}'
+f = open('C:/Users/Артём/Desktop/python_learning/sites.txt', 'a')
+f.write('{}: {}'.format(site, now.strftime("%Y-%m-%d %H:%M:%S")))
 f.close()
 
  
@@ -34,21 +35,26 @@ all_tags = [x.tag for x in all_elms]
 c = Counter(all_tags)
 
 
-f = open('C:/Users/Artem_Vetoshev/Desktop/py/file.txt', 'w')
+f = open('C:/Users/Артём/Desktop/python_learning/file.txt', 'w')
 for e in c:
-	# json.dump('{}: {}'.format(e, c[e]), f)
-	json.dump((e, c[e]), f)
-
+	d = "{\n" + ",\n".join(json.dumps('{}: {}'.format(e, c[e])) for e in c ) + "\n}"
+	# "[\n" + json.dump('{}: {}'.format(e, c[e]), f, separators=(': ', ', ')) + "\n]"
+	# json.dump((e, c[e]), f, sort_keys=True, separators=(': ', ', '))
+# f.write(d)
+# replaced = re.sub('[ES]', 'a', s)
+reg = re.sub('"[a-z]: [0-9]"', '"[a-z]": [0-9]', d)
+print(type(d))
+print(reg)
 f.close()
 # with open("out", "w") as outfile:
 #   outfile.write(dump)
 
-# f = open('C:/Users/Artem_Vetoshev/Desktop/py/file.txt', 'w')
+# f = open('C:/Users/Артём/Desktop/python_learning/file.txt', 'w')
 # for e in c:
 # 	f.write('{}: {}'.format(e, c[e]))
 # f.close()
 
-f = open('C:/Users/Artem_Vetoshev/Desktop/py/file.txt', 'r')
+f = open('C:/Users/Артём/Desktop/python_learning/file.txt', 'r')
 data = f.read()
 print(data)
 values = [site, url, now.strftime("%Y-%m-%d %H:%M:%S"), dumps(data), data]
