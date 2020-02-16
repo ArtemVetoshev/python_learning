@@ -1,0 +1,121 @@
+columns:
+- column:
+    name: id
+    type: uuid
+- column:
+    name: addendumType
+    type: varchar
+- column:
+    name: closingMethod
+    type: varchar
+- column:
+    name: closingFromDraftIndicator
+    type: bool
+- column:
+    name: readyToSignIndicator
+    type: bool
+- column:
+    name: readyToSignDate
+    type: bool
+- column:
+    name: utilisationPeriod1Begin
+    type: date
+- column:
+    name: utilisationPeriod1End
+    type: date
+- column:
+    name: utilisationPeriod2Begin
+    type: date
+- column:
+    name: utilisationPeriod2End
+    type: date
+- column:
+    name: utilisationPeriod3Begin
+    type: date
+- column:
+    name: utilisationPeriod3End
+    type: date
+- column:
+    name: excludedFromKbmIndicator
+    type: bool
+- column:
+    name: driverLimitIndicator
+    type: bool
+- column:
+    name: registrationTransitIndicator
+    type: bool
+- column:
+    name: premiumAndDelta
+    type: numeric
+- column:
+    name: premiumPaymentRecallDate
+    type: date
+- column:
+    name: issueDate
+    type: date
+- column:
+    name: primaryDrivingArea
+    type: varchar
+- column:
+    name: trailerIndicator
+    type: bool
+- column:
+    name: vehicleUtilisationIntent
+    type: varchar
+- column:
+    name: maintenanceStations
+    type: jsonb
+- column:
+    name: parties
+    type: jsonb
+- column:
+    name: vehicle
+    type: jsonb
+- column:
+    name: externalObjectId
+    type: varchar
+- column:
+    name: baseTariff
+    type: numeric
+- column:
+    name: kt
+    type: numeric
+- column:
+    name: kvs
+    type: numeric
+- column:
+    name: ko
+    type: numeric
+- column:
+    name: km
+    type: numeric
+- column:
+    name: ks
+    type: numeric
+- column:
+    name: kn
+    type: numeric
+- column:
+    name: kp
+    type: numeric
+- column:
+    name: kpr
+    type: numeric
+- column:
+    name: providedKbm_value
+    type: numeric
+- column:
+    name: providedKbm_CalculationId
+    type: varchar
+- column:
+    name: calculatedKbm_value
+    type: numeric
+- column:
+    name: calculatedKbm_CalculationId
+    type: varchar
+- column:
+    name: baseTariffDateTime
+    type: timestamptz
+- column:
+    name: freeCoefficients
+    type: jsonb

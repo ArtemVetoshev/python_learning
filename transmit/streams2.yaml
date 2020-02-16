@@ -1,0 +1,405 @@
+- target_field: person_pr_key
+  method:
+    type: copy_field
+    field: person_pr_key
+
+- target_field: state
+  method:
+    type: copy_field
+    field: state
+
+- target_field: create_date
+  method:
+    type: copy_field
+    field: create_date
+
+- target_field: quality_grade
+  method:
+    type: copy_field
+    field: quality_grade
+
+- target_field: quality_update_date
+  method:
+    type: copy_field
+    field: quality_update_date
+
+- target_field: quality_grade_source
+  method:
+    type: copy_field
+    field: quality_grade_source
+
+- target_field: termination_date
+  method:
+    type: copy_field
+    field: termination_date
+
+- target_field: at_previous_record_id
+  method:
+    type: copy_field
+    field: at_previous_record_id
+
+- target_field: at_address_type
+  method:
+    type: copy_field
+    field: at_address_type
+
+- target_field: at_address
+  method:
+    type: copy_field
+    field: at_address
+
+- target_field: at_addess_fias
+  method:
+    type: copy_field
+    field: at_addess_fias
+
+- target_field: at_snils
+  method:
+    type: copy_field
+    field: at_snils
+
+- target_field: at_inn
+  method:
+    type: copy_field
+    field: at_inn
+
+- target_field: at_phone_type
+  method:
+    type: copy_field
+    field: at_phone_type
+
+- target_field: at_phone
+  method:
+    type: copy_field
+    field: at_phone
+
+- target_field: at_email_type
+  method:
+    type: copy_field
+    field: at_email_type
+
+- target_field: at_email
+  method:
+    type: copy_field
+    field: at_email
+
+- target_field: at_sts_series
+  method:
+    type: copy_field
+    field: at_sts_series
+
+- target_field: at_sts_number
+  method:
+    type: copy_field
+    field: at_sts_number
+
+- target_field: at_id_card_country
+  method:
+    type: copy_field
+    field: at_id_card_country
+
+- target_field: at_id_card_type
+  method:
+    type: copy_field
+    field: at_id_card_type
+
+- target_field: at_id_card_series
+  method:
+    type: copy_field
+    field: at_id_card_series
+
+- target_field: at_id_card_number
+  method:
+    type: copy_field
+    field: at_id_card_number
+
+- target_field: at_id_card_issue_date
+  method:
+    type: copy_field
+    field: at_id_card_issue_date
+
+- target_field: at_id_card_last_name
+  method:
+    type: copy_field
+    field: at_id_card_last_name
+
+- target_field: at_id_card_first_name
+  method:
+    type: copy_field
+    field: at_id_card_first_name
+
+- target_field: at_id_card_middle_name
+  method:
+    type: copy_field
+    field: at_id_card_middle_name
+
+- target_field: at_id_card_birth_date
+  method:
+    type: copy_field
+    field: at_id_card_birth_date
+
+- target_field: at_id_card_name_birth_hash
+  method:
+    type: copy_field
+    field: at_id_card_name_birth_hash
+
+- target_field: at_id_card_address_type
+  method:
+    type: copy_field
+    field: at_id_card_address_type
+
+- target_field: at_id_card_address
+  method:
+    type: copy_field
+    field: at_id_card_address
+
+- target_field: at_id_card_address_fias
+  method:
+    type: copy_field
+    field: at_id_card_address_fias
+
+- target_field: at_id_card_validity_status
+  method:
+    type: copy_field
+    field: at_id_card_validity_status
+
+- target_field: at_id_card_not_valid_date
+  method:
+    type: copy_field
+    field: at_id_card_not_valid_date
+
+- target_field: at_id_card_not_valid_reason
+  method:
+    type: copy_field
+    field: at_id_card_not_valid_reason
+
+- target_field: at_alt_id_card_country
+  method:
+    type: copy_field
+    field: at_alt_id_card_country
+
+- target_field: at_alt_id_card_type
+  method:
+    type: copy_field
+    field: at_alt_id_card_type
+
+- target_field: at_alt_id_card_series
+  method:
+    type: copy_field
+    field: at_alt_id_card_series
+
+- target_field: at_alt_id_card_number
+  method:
+    type: copy_field
+    field: at_alt_id_card_number
+
+- target_field: at_alt_id_card_issue_date
+  method:
+    type: copy_field
+    field: at_alt_id_card_issue_date
+
+- target_field: at_alt_id_card_last_name
+  method:
+    type: copy_field
+    field: at_alt_id_card_last_name
+
+- target_field: at_alt_id_card_first_name
+  method:
+    type: copy_field
+    field: at_alt_id_card_first_name
+
+- target_field: at_alt_id_card_middle_name
+  method:
+    type: copy_field
+    field: at_alt_id_card_middle_name
+
+- target_field: at_alt_id_card_birth_date
+  method:
+    type: copy_field
+    field: at_alt_id_card_birth_date
+
+- target_field: at_alt_id_card_name_birth_hash
+  method:
+    type: copy_field
+    field: at_alt_id_card_name_birth_hash
+
+- target_field: at_alt_id_card_address_type
+  method:
+    type: copy_field
+    field: at_alt_id_card_address_type
+
+- target_field: at_alt_id_card_address
+  method:
+    type: copy_field
+    field: at_alt_id_card_address
+
+- target_field: at_alt_id_card_address_fias
+  method:
+    type: copy_field
+    field: at_alt_id_card_address_fias
+
+- target_field: at_alt_id_card_validity_status
+  method:
+    type: copy_field
+    field: at_alt_id_card_validity_status
+
+- target_field: at_alt_id_card_not_valid_date
+  method:
+    type: copy_field
+    field: at_alt_id_card_not_valid_date
+
+- target_field: at_alt_id_card_not_valid_reason
+  method:
+    type: copy_field
+    field: at_alt_id_card_not_valid_reason
+
+- target_field: at_driver_lic_country
+  method:
+    type: copy_field
+    field: at_driver_lic_country
+
+- target_field: at_driver_lic_type
+  method:
+    type: copy_field
+    field: at_driver_lic_type
+
+- target_field: at_driver_lic_series
+  method:
+    type: copy_field
+    field: at_driver_lic_series
+
+- target_field: at_driver_lic_number
+  method:
+    type: copy_field
+    field: at_driver_lic_number
+
+- target_field: at_driver_lic_issue_date
+  method:
+    type: copy_field
+    field: at_driver_lic_issue_date
+
+- target_field: at_driver_lic_last_name
+  method:
+    type: copy_field
+    field: at_driver_lic_last_name
+
+- target_field: at_driver_lic_first_name
+  method:
+    type: copy_field
+    field: at_driver_lic_first_name
+
+- target_field: at_driver_lic_middle_name
+  method:
+    type: copy_field
+    field: at_driver_lic_middle_name
+
+- target_field: at_driver_lic_birth_date
+  method:
+    type: copy_field
+    field: at_driver_lic_birth_date
+
+- target_field: at_driver_lic_name_birth_hash
+  method:
+    type: copy_field
+    field: at_driver_lic_name_birth_hash
+
+- target_field: at_driver_lic_start_date
+  method:
+    type: copy_field
+    field: at_driver_lic_start_date
+
+- target_field: at_driver_lic_category
+  method:
+    type: copy_field
+    field: at_driver_lic_category
+
+- target_field: at_driver_lic_validity_status
+  method:
+    type: copy_field
+    field: at_driver_lic_validity_status
+
+- target_field: at_driver_lic_issue_date_foiv
+  method:
+    type: copy_field
+    field: at_driver_lic_issue_date_foiv
+
+- target_field: at_driver_lic_issue_date_end_foiv
+  method:
+    type: copy_field
+    field: at_driver_lic_issue_date_end_foiv
+
+- target_field: at_alt_driver_lic_country
+  method:
+    type: copy_field
+    field: at_alt_driver_lic_country
+
+- target_field: at_alt_driver_lic_type
+  method:
+    type: copy_field
+    field: at_alt_driver_lic_type
+
+- target_field: at_alt_driver_lic_series
+  method:
+    type: copy_field
+    field: at_alt_driver_lic_series
+
+- target_field: at_alt_driver_lic_number
+  method:
+    type: copy_field
+    field: at_alt_driver_lic_number
+
+- target_field: at_alt_driver_lic_issue_date
+  method:
+    type: copy_field
+    field: at_alt_driver_lic_issue_date
+
+- target_field: at_alt_driver_lic_last_name
+  method:
+    type: copy_field
+    field: at_alt_driver_lic_last_name
+
+- target_field: at_alt_driver_lic_first_name
+  method:
+    type: copy_field
+    field: at_alt_driver_lic_first_name
+
+- target_field: at_alt_driver_lic_middle_name
+  method:
+    type: copy_field
+    field: at_alt_driver_lic_middle_name
+
+- target_field: at_alt_driver_lic_birth_date
+  method:
+    type: copy_field
+    field: at_alt_driver_lic_birth_date
+
+- target_field: at_alt_driver_lic_name_birth_hash
+  method:
+    type: copy_field
+    field: at_alt_driver_lic_name_birth_hash
+
+- target_field: at_alt_driver_lic_start_date
+  method:
+    type: copy_field
+    field: at_alt_driver_lic_start_date
+
+- target_field: at_alt_driver_lic_category
+  method:
+    type: copy_field
+    field: at_alt_driver_lic_category
+
+- target_field: at_alt_driver_lic_validity_status
+  method:
+    type: copy_field
+    field: at_alt_driver_lic_validity_status
+
+- target_field: at_alt_driver_lic_issue_date_foiv
+  method:
+    type: copy_field
+    field: at_alt_driver_lic_issue_date_foiv
+
+- target_field: at_alt_driver_lic_issue_date_end_foiv
+  method:
+    type: copy_field
+    field: at_alt_driver_lic_issue_date_end_foiv
+

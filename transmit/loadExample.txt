@@ -1,0 +1,235 @@
+columns:
+- column:
+    name: id
+    type: bigint
+- column:
+    name: primary_record_id
+    type: bigint
+- column:
+    name: record_hash
+    type: bytea
+- column:
+    name: create_date
+    type: timestamptz
+- column:
+    name: termination_date
+    type: timestamptz
+- column:
+    name: at_last_name
+    type: varchar
+- column:
+    name: at_first_name
+    type: varchar
+- column:
+    name: at_middle_name
+    type: varchar
+- column:
+    name: at_birth_date
+    type: date
+- column:
+    name: at_name_birth_hash
+    type: varchar
+- column:
+    name: at_previous_primary_record_id
+    type: bigint
+- column:
+    name: at_address_type
+    type: varchar
+- column:
+    name: at_address
+    type: varchar
+- column:
+    name: at_address_fias
+    type: varchar
+- column:
+    name: at_snils
+    type: varchar
+- column:
+    name: at_inn
+    type: varchar
+- column:
+    name: at_phone_type
+    type: varchar
+- column:
+    name: at_phone
+    type: varchar
+- column:
+    name: at_email_type
+    type: varchar
+- column:
+    name: at_email
+    type: varchar
+- column:
+    name: at_sts_series
+    type: varchar
+- column:
+    name: at_sts_number
+    type: varchar
+- column:
+    name: at_id_card_country
+    type: varchar
+- column:
+    name: at_id_card_type
+    type: varchar
+- column:
+    name: at_id_card_series
+    type: varchar
+- column:
+    name: at_id_card_number
+    type: varchar
+- column:
+    name: at_id_card_issue_date
+    type: date
+- column:
+    name: at_id_card_last_name
+    type: varchar
+- column:
+    name: at_id_card_first_name
+    type: varchar
+- column:
+    name: at_id_card_middle_name
+    type: varchar
+- column:
+    name: at_id_card_birth_date
+    type: date
+- column:
+    name: at_id_card_name_birth_hash
+    type: varchar
+- column:
+    name: at_id_card_address_type
+    type: varchar
+- column:
+    name: at_id_card_address
+    type: varchar
+- column:
+    name: at_id_card_address_fias
+    type: varchar
+- column:
+    name: at_alt_id_card_country
+    type: varchar
+- column:
+    name: at_alt_id_card_type
+    type: varchar
+- column:
+    name: at_alt_id_card_series
+    type: varchar
+- column:
+    name: at_alt_id_card_number
+    type: varchar
+- column:
+    name: at_alt_id_card_issue_date
+    type: date
+- column:
+    name: at_alt_id_card_last_name
+    type: varchar
+- column:
+    name: at_alt_id_card_first_name
+    type: varchar
+- column:
+    name: at_alt_id_card_middle_name
+    type: varchar
+- column:
+    name: at_alt_id_card_birth_date
+    type: date
+- column:
+    name: at_alt_id_card_name_birth_hash
+    type: varchar
+- column:
+    name: at_alt_id_card_address_type
+    type: varchar
+- column:
+    name: at_alt_id_card_address
+    type: varchar
+- column:
+    name: at_alt_id_card_address_fias
+    type: varchar
+- column:
+    name: at_driver_lic_country
+    type: varchar
+- column:
+    name: at_driver_lic_series
+    type: varchar
+- column:
+    name: at_driver_lic_number
+    type: varchar
+- column:
+    name: at_driver_lic_issue_date
+    type: date
+- column:
+    name: at_driver_lic_last_name
+    type: varchar
+- column:
+    name: at_driver_lic_first_name
+    type: varchar
+- column:
+    name: at_driver_lic_middle_name
+    type: varchar
+- column:
+    name: at_driver_lic_birth_date
+    type: date
+- column:
+    name: at_driver_lic_name_birth_hash
+    type: varchar
+- column:
+    name: at_driver_lic_start_date
+    type: date
+- column:
+    name: at_driver_lic_category
+    type: varchar
+- column:
+    name: at_alt_driver_lic_country
+    type: varchar
+- column:
+    name: at_alt_driver_lic_series
+    type: varchar
+- column:
+    name: at_alt_driver_lic_number
+    type: varchar
+- column:
+    name: at_alt_driver_lic_issue_date
+    type: date
+- column:
+    name: at_alt_driver_lic_last_name
+    type: varchar
+- column:
+    name: at_alt_driver_lic_first_name
+    type: varchar
+- column:
+    name: at_alt_driver_lic_middle_name
+    type: varchar
+- column:
+    name: at_alt_driver_lic_birth_date
+    type: date
+- column:
+    name: at_alt_driver_lic_name_birth_hash
+    type: varchar
+- column:
+    name: at_alt_driver_lic_start_date
+    type: date
+- column:
+    name: at_alt_driver_lic_category
+    type: varchar
+- column:
+    name: at_id_card_invalidity_status
+    type: varchar
+- column:
+    name: at_id_card_invalidity_date
+    type: date
+- column:
+    name: at_id_card_invalidity_reason
+    type: varchar
+- column:
+    name: at_alt_id_card_invalidity_status
+    type: varchar
+- column:
+    name: at_alt_id_card_invalidity_date
+    type: date
+- column:
+    name: at_alt_id_card_invalidity_reason
+    type: varchar
+- column:
+    name: at_driver_lic_type
+    type: varchar
+- column:
+    name: at_alt_driver_lic_type
+    type: varchar
