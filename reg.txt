@@ -1,0 +1,61 @@
+processing_type: extract_wal_stream
+mapping:
+    - target_field: id
+      method:
+        type: jsonb_extract_vpath
+        field: message
+        json_key: id
+
+    - target_field: golden_record_id
+      method:
+        type: jsonb_extract_vpath
+        field: message
+        json_key: golden_record_id
+
+    - target_field: create_date
+      method:
+        type: extract_origin_json_to_timestamp
+        field: message
+        json_key: create_date
+
+    - target_field: update_date
+      method:
+        type: extract_origin_json_to_timestamp
+        field: message
+        json_key: update_date
+
+    - target_field: effective_from
+      method:
+        type: extract_origin_json_to_timestamp
+        field: message
+        json_key: effective_from
+
+    - target_field: effective_till
+      method:
+        type: extract_origin_json_to_timestamp
+        field: message
+        json_key: effective_till
+
+    - target_field: quality_grade
+      method:
+        type: jsonb_extract_vpath
+        field: message
+        json_key: quality_grade
+
+    - target_field: control_date
+      method:
+        type: extract_origin_json_to_timestamp
+        field: message
+        json_key: control_date
+
+    - target_field: source_primary_record_ids
+      method:
+        type: jsonb_extract_vpath
+        field: message
+        json_key: source_primary_record_ids
+
+    - target_field: at_vin
+      method:
+        type: jsonb_extract_vpath
+        field: message
+        json_key: at_vin
