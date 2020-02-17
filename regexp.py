@@ -21,6 +21,7 @@ for i in range(2, len(array), 6):
 		minus2 = re.sub('qg_', '', minus_)+'_Quality'
 	third = ''.join(word.title() for word in minus2.split('_'))
 	third2 = re.sub(r'^\w', third[:1].lower(), third)
-	filereg.write(target % (nameStr, 'extract_origin_json_to_timestamp' if typeStr =='extract_origin_json_to_timestamp' else 'jsonb_extract_vpath', third2))
+	third3 = "'{data, " + third2 + "}'"
+	filereg.write(target % (nameStr, 'extract_origin_json_to_timestamp' if typeStr =='extract_origin_json_to_timestamp' else 'jsonb_extract_vpath', third3))
 file.close()
 filereg.close()

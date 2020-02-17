@@ -2,59 +2,59 @@
       method:
         type: jsonb_extract_vpath
         field: message
-        json_key: id
+        json_key: '{data, id}'
 
 	- target_field: golden_record_id
       method:
         type: jsonb_extract_vpath
         field: message
-        json_key: goldenRecordId
+        json_key: '{data, goldenRecordId}'
 
 	- target_field: create_date
       method:
         type: extract_origin_json_to_timestamp
         field: message
-        json_key: createDate
+        json_key: '{data, createDate}'
 
 	- target_field: update_date
       method:
         type: extract_origin_json_to_timestamp
         field: message
-        json_key: updateDate
+        json_key: '{data, updateDate}'
 
 	- target_field: effective_from
       method:
         type: extract_origin_json_to_timestamp
         field: message
-        json_key: effectiveFrom
+        json_key: '{data, effectiveFrom}'
 
 	- target_field: effective_till
       method:
         type: extract_origin_json_to_timestamp
         field: message
-        json_key: effectiveTill
+        json_key: '{data, effectiveTill}'
 
 	- target_field: quality_grade
       method:
         type: jsonb_extract_vpath
         field: message
-        json_key: qualityGrade
+        json_key: '{data, qualityGrade}'
 
 	- target_field: control_date
       method:
         type: extract_origin_json_to_timestamp
         field: message
-        json_key: controlDate
+        json_key: '{data, controlDate}'
 
 	- target_field: source_primary_record_ids
       method:
         type: jsonb_extract_vpath
         field: message
-        json_key: sourcePrimaryRecordIds
+        json_key: '{data, sourcePrimaryRecordIds}'
 
-	- target_field: at_vin
+	- target_field: at_ais_osago_contract_id
       method:
         type: jsonb_extract_vpath
         field: message
-        json_key: vin
+        json_key: '{data, aisOsagoContractId}'
 
