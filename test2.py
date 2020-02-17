@@ -173,9 +173,9 @@ class Main(tk.Frame):
         toolbar = tk.Frame(bg='#d7d8e0', bd=2)
         toolbar.pack(side=tk.TOP, fill=tk.X)
 
-        self.add_img = tk.PhotoImage(file="C:/Users/Артём/Desktop/add.png")
+        # self.add_img = tk.PhotoImage(file="C:/Users/artem_vetoshev/Desktop/add.png")
         btn_open_dialog = tk.Button(toolbar, text='Добавить позицию', command=self.open_dialog, bg='#d7d8e0', bd=0,
-                                    compound=tk.TOP, image=self.add_img)
+                                    compound=tk.TOP)
         btn_open_dialog.pack(side=tk.LEFT)
 
         self.tree = ttk.Treeview(self, columns=('ID', 'description', 'costs', 'total'),
@@ -230,7 +230,7 @@ class Child(tk.Toplevel):
         self.entry_money.place(x=200, y=110)
 
         result = []
-        with open('C:/Users/Артём/Desktop/python_learning/sites.txt', 'r') as f:
+        with open('C:/Users/artem_vetoshev/Desktop/python_learning/sites.txt', 'r') as f:
             for row in f:
                 result.append(row.split(',')[0])
         result = list(set(result))

@@ -14,9 +14,9 @@ class Main(tk.Frame):
         toolbar = tk.Frame(bg='#d7d8e0', bd=2)
         toolbar.pack(side=tk.TOP, fill=tk.X)
 
-        self.add_img = tk.PhotoImage(file='add.gif')
+        # self.add_img = tk.PhotoImage(file='add.gif')
         btn_open_dialog = tk.Button(toolbar, text='Добавить позицию', command=self.open_dialog, bg='#d7d8e0', bd=0,
-                                    compound=tk.TOP, image=self.add_img)
+                                    compound=tk.TOP)
         btn_open_dialog.pack(side=tk.LEFT)
 
         self.tree = ttk.Treeview(self, columns=('ID', 'description', 'costs', 'total'), height=15, show='headings')

@@ -24,15 +24,15 @@ page = requests.get(url)
 tree = html.fromstring(page.content)
 now = datetime.datetime.now()
 
-f = open('C:/Users/Артём/Desktop/python_learning/sites.txt', 'a')
-f.write('{}, {}\n'.format(site, now.strftime("%Y-%m-%d %H:%M:%S")))
+f = open('C:/Users/artem_vetoshev/Desktop/python_learning/sites.txt', 'a')
+f.write('{}, {}\n'.format(url, now.strftime("%Y-%m-%d %H:%M:%S")))
 f.close()
 
 all_elms = tree.cssselect('*')
 all_tags = [x.tag for x in all_elms]
 c = Counter(all_tags)
 
-f = open('C:/Users/Артём/Desktop/python_learning/file.txt', 'w')
+f = open('C:/Users/artem_vetoshev/Desktop/python_learning/file.txt', 'w')
 for e in c:
 	d = "{" + ", ".join(json.dumps('{}: {}'.format(e, c[e])) for e in c ) + "}"
 reg = re.sub(r'\"+(\w+)\: +' r'(\d{1,4})\"', r'"\1": \2', d)
@@ -40,7 +40,7 @@ f.write(reg)
 print(reg)
 f.close()
 
-f = open('C:/Users/Артём/Desktop/python_learning/file.txt', 'r')
+f = open('C:/Users/artem_vetoshev/Desktop/python_learning/file.txt', 'r')
 data = f.read()
 print(data)
 values = [site, url, now.strftime("%Y-%m-%d %H:%M:%S"), dumps(data), data]
@@ -69,7 +69,7 @@ conn.close()
 
 
 result = []
-with open('C:/Users/Артём/Desktop/python_learning/sites.txt', 'r') as f:
+with open('C:/Users/artem_vetoshev/Desktop/python_learning/sites.txt', 'r') as f:
 	for row in f:
 		result.append(row.split(',')[0])
 result = list(set(result))
