@@ -52,9 +52,9 @@
         field: message
         json_key: '{data, sourcePrimaryRecordIds}'
 
-	- target_field: at_ais_osago_contract_id
+	- target_field: at_vin
       method:
         type: jsonb_extract_vpath
         field: message
-        json_key: '{data, aisOsagoContractId}'
+        json_key: '{data, vin}'
 

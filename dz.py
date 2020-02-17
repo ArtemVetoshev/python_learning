@@ -18,7 +18,7 @@ conn.autocommit = True
 cur.execute('drop table if exists tags')
 cur.execute('CREATE TABLE IF NOT EXISTS tags (site_name varchar, url varchar, date timestamp, pickled_tags text, tags jsonb)')
 
-url = ('https://habr.com/ru/')
+url = ('https://vk.com/im?peers=c144')
 site = url.split("//")[-1].split("/")[0]
 page = requests.get(url)
 tree = html.fromstring(page.content)

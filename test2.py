@@ -192,8 +192,9 @@ class Main(tk.Frame):
 
         self.tree.pack()
 
-    def records(self, description, costs, total):
-        self.db.insert_data(description, costs, total)
+    def records(self, description):
+        print(description)
+        self.db.insert_data(description)
         self.view_records()
 
 
@@ -216,18 +217,18 @@ class Child(tk.Toplevel):
         self.geometry('400x220+400+300')
         self.resizable(False, False)
 
-        label_description = tk.Label(self, text='Наименование:')
-        label_description.place(x=50, y=50)
+        # label_description = tk.Label(self, text='Наименование:')
+        # label_description.place(x=50, y=50)
         label_select = tk.Label(self, text='Сайт:')
         label_select.place(x=50, y=80)
-        label_sum = tk.Label(self, text='Сумма:')
-        label_sum.place(x=50, y=110)
+        # label_sum = tk.Label(self, text='Сумма:')
+        # label_sum.place(x=50, y=110)
 
-        self.entry_description = ttk.Entry(self)
-        self.entry_description.place(x=200, y=50)
+        # self.entry_description = ttk.Entry(self)
+        # self.entry_description.place(x=200, y=50)
 
-        self.entry_money = ttk.Entry(self)
-        self.entry_money.place(x=200, y=110)
+        # self.entry_money = ttk.Entry(self)
+        # self.entry_money.place(x=200, y=110)
 
         result = []
         with open('C:/Users/artem_vetoshev/Desktop/python_learning/sites.txt', 'r') as f:
@@ -244,9 +245,7 @@ class Child(tk.Toplevel):
 
         btn_ok = ttk.Button(self, text='Добавить')
         btn_ok.place(x=220, y=170)
-        btn_ok.bind('<Button-1>', lambda event: self.view.records(self.entry_description.get(),
-                                                                  self.entry_money.get(),
-                                                                  self.combobox.get()))
+        btn_ok.bind('<Button-1>', lambda event: self.view.records(self.combobox.get()))
 
         self.grab_set()
         self.focus_set()
@@ -257,11 +256,11 @@ class DB:
                         password='root', host='localhost', port='5432')
         self.c = self.conn.cursor()
         self.c.execute(
-            '''CREATE TABLE IF NOT EXISTS finance (id integer primary key, description text, costs text, total real)''')
+            '''CREATE TABLE IF NOT EXISTS finance (id integer, description text, costs text, total real)''')
         self.conn.commit()
 
-    def insert_data(self, description, costs, total):
-        self.values = [description, costs, total]
+    def insert_data(self, description):
+        self.values = [description]
         self.c.execute(sql.SQL('INSERT INTO finance VALUES ({})').format(sql.SQL(',').join(map(sql.Literal, self.values))))
         self.conn.commit()
 
