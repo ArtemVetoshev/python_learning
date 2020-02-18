@@ -13,7 +13,7 @@ target = '''	- target_field: %s
 
 for i in range(2, len(array), 6):
 	nameStr = array[i].strip().split(': ')[1]
-	typeStr = array[i+2].strip().split(': ')[1]
+	typeStr = 'extract_json'
 	minus_ = re.sub('at_', '', nameStr)
 	if minus_.find('qg_', 0) != 0:
 		minus2 = minus_
@@ -22,6 +22,6 @@ for i in range(2, len(array), 6):
 	third = ''.join(word.title() for word in minus2.split('_'))
 	third2 = re.sub(r'^\w', third[:1].lower(), third)
 	third3 = "'{data, " + third2 + "}'"
-	filereg.write(target % (nameStr, 'extract_origin_json_to_timestamp' if typeStr =='extract_origin_json_to_timestamp' else 'jsonb_extract_vpath', third3))
+	filereg.write(target % (nameStr, typeStr, third3))
 file.close()
 filereg.close()
